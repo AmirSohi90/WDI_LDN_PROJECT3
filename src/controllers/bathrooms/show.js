@@ -17,7 +17,8 @@ function BathroomsShowCtrl(Bathroom, User, $state, $auth) {
       .then(() => {
         vm.destinationLat = vm.bathroom.location.lat;
         vm.destinationLng =  vm.bathroom.location.lng;
-        console.log(vm.bathroom);
+        console.log('bathroom', vm.bathroom);
+        console.log('vm', vm);
       });
   }
 

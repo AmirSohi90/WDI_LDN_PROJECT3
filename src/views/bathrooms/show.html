@@ -16,8 +16,8 @@
             </div>
           </div>
           <div class="edit-and-delete">
-            <a ui-sref="bathroomsEdit({ id: bathroomsShow.bathroom._id })" class="button" ng-if="bathroomsShow.user._id === bathroomsShow.bathroom.user">Edit</a>
-            <button class="button is-danger" ng-click="bathroomsShow.remove()" ng-if="bathroomsShow.user._id === bathroomsShow.bathroom.user">Delete</button>
+            <a ui-sref="bathroomsEdit({ id: bathroomsShow.bathroom._id })" class="button" ng-if="bathroomsShow.user.id === bathroomsShow.bathroom.user.id">Edit</a>
+            <button class="button is-danger" ng-click="bathroomsShow.remove()" ng-if="bathroomsShow.user.id === bathroomsShow.bathroom.user.id">Delete</button>
           </div>
           <div class="icon-images">
             <div class="columns is-multiline is-mobile">
@@ -49,7 +49,7 @@
             </div>
 
           </div>
-          <form ng-submit="bathroomsShow.handleRequest()" ng-if="bathroomsShow.bathroom.isAvailable && bathroomsShow.user._id !== bathroomsShow.bathroom.user && bathroomsShow.user">
+          <form ng-submit="bathroomsShow.handleRequest()" ng-if="bathroomsShow.bathroom.isAvailable && (bathroomsShow.user.id !== bathroomsShow.bathroom.user.id) && bathroomsShow.user.id">
             <button class="button request-button" value="Submit">Request bathroom</button>
           </form>
         </div>
